@@ -27,3 +27,22 @@ module.exports = async (req, res) => {
     res.status(500).json({ error: 'Erro ao enviar o e-mail' });
   }
 };
+
+module.exports = (req, res) => {
+    if (req.method === 'POST') {
+        const { email, message } = req.body;
+        const transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: 'nathalia.yoshioka.dev2024@gmail.com',
+            pass: 'fciasdhwoqypptjm',
+          },
+          debug: true,
+          logger: true,
+});
+        res.status(200).send('Mensagem enviada com sucesso!');
+    } else {
+        res.status(405).send('Método não permitido');
+    }
+};
+
