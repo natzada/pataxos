@@ -1,4 +1,3 @@
-// require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
@@ -19,23 +18,21 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
-
-
 // Configurar o transporte de email (usando Gmail)
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'nathalia.yoshioka.dev2024@gmail.com',
-        pass: 'fciasdhwoqypptjm',
+        pass: 'fciasdhwoqypptjm', // Utilize senha de app ou variável de ambiente para maior segurança
     },
     debug: true,
     logger: true,
 });
 
-
 // Rota para processar o formulário
 app.post('/contact', (req, res) => {
-    console.log('Dados recebidos do formulário:', req.body); // Log para depuração
+    console.log('Dados recebidos do formulário:', req.body); // Para depuração
+
     const { email, message, honeypot } = req.body;
 
     // Verificar honeypot (anti-spam)
@@ -76,18 +73,3 @@ app.post('/contact', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
-
-// app.get('/teste-email', (req, res) => {
-//     transporter.sendMail({
-//         from: 'nathalia.yoshioka.dev2024@gmail.com',
-//         to: 'naatzada.ay@gmail.com',
-//         subject: 'Teste rápido de email',
-//         text: 'Isso é um teste de envio manual via rota /teste-email',
-//     }, (error, info) => {
-//         if (error) {
-//             console.error(error);
-//             return res.send('Erro: ' + error.message);
-//         }
-//         res.send('Email enviado com sucesso! ' + info.response);
-//     });
-// });
