@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
   // Configuração do e-mail
   const mailOptions = {
     from: email,
-    to: 'seu-email@gmail.com', // Seu email
+    to: 'naatzada.ay@gmail.com', // Seu email
     subject: 'Nova Mensagem do Formulário de Contato',
     text: message,
   };
