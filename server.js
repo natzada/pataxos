@@ -22,12 +22,13 @@ app.get('/', (req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'nathalia.yoshioka.dev2024@gmail.com',
-        pass: 'fciasdhwoqypptjm', // Utilize senha de app ou variável de ambiente para maior segurança
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
     },
     debug: true,
     logger: true,
 });
+
 
 // Rota para processar o formulário
 app.post('/contact', (req, res) => {
