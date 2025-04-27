@@ -1,0 +1,965 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #16281f;
+  color: white;
+}
+
+.background {
+  background: url("/assets/pataxo_foto2.jpg") no-repeat;
+  background-color: #0000006a;
+  background-size: cover;
+  height: 100vh;
+}
+
+header {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 5px 10px;
+  z-index: 1000;
+}
+
+.hamburger-fallback {
+  display: none;
+  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px;
+  padding: 7px;
+}
+
+nav ul li a:hover {
+  background-color: #0041236d;
+  border-radius: 40px;
+}
+
+.game-button {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+}
+
+.game-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.game-button-div {
+  padding: 10px;
+}
+
+.game-button-div:hover {
+  background-color: #0041236d;
+  border-radius: 50px;
+}
+
+.title {
+  font-size: 60px;
+  margin: 150px 0 0 330px;
+}
+
+.subtitle {
+  font-size: 30px;
+  margin: 5px 0 0 330px;
+}
+
+.title,
+.subtitle {
+  background-color: #0000000a;
+  width: 30%;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+section {
+  margin: 20px;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.156);
+  box-shadow: 2px 3px #00000047;
+  border-radius: 20px;
+}
+
+.history-article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-content {
+  width: 40%;
+  font-size: 25px;
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.images {
+  width: 40%;
+  border-radius: 20px;
+}
+
+.culture-card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.culture-text {
+  width: 40%;
+  font-size: 25px;
+  margin: 20px;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+
+.images-food {
+  width: 30%;
+  height: 40vh;
+  margin-top: 50px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#culture {
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.culture-title {
+  font-size: 60px;
+  color: #ffffff8b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.location-article {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.location-description {
+  width: 60%;
+  font-size: 25px;
+  margin: 20px;
+  margin-top: 4px;
+  align-self: center;
+}
+
+.images-location {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+footer {
+  background-color: #0000006d;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  margin: 10px;
+}
+
+.contact-us {
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(92, 154, 101, 0.347);
+  width: 40%;
+  height: 45vh;
+  border-radius: 20px;
+}
+
+.contact-us h1 {
+  margin-bottom: 5%;
+}
+
+.contact-us form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  margin-bottom: 5%;
+}
+
+.contact-us form textarea,
+.contact-us form input {
+  margin: 10px;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-bottom: 2px solid white;
+  font-size: 19px;
+}
+
+.contact-us div input[type="email"] {
+  height: 40%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact-us button {
+  background-color: #1aac68;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 30%;
+  padding: 10px;
+}
+
+.problems-title {
+  font-size: 60px;
+  color: #ffffff8b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#problems {
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
+.flex-footer {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.flex-footer h3 {
+  margin: 10px;
+  text-align: left;
+  font-size: 25px;
+}
+
+.flex-footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin: 7px;
+}
+
+.faq-item {
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #0041236d;
+  color: white;
+}
+
+.faq-item summary:hover {
+  background-color: #004123;
+}
+
+.faq-item p {
+  padding: 15px;
+  font-size: 18px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.timeline-title {
+  font-size: 60px;
+  color: #ffffff8b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#timeline {
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #1aac68;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  width: 50%;
+  padding: 10px 40px;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #1aac68;
+  border: 2px solid white;
+  border-radius: 50%;
+  top: 15px;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -13px;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -13px;
+}
+
+.timeline-date {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.timeline-description {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-description p {
+  margin: 0;
+}
+
+.rights-title {
+  font-size: 60px;
+  color: #ffffff8b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.rights-intro {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.rights-list {
+  list-style: none;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.rights-list li {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.rights-list li strong {
+  color: #1aac68;
+}
+
+.rights-list ul {
+  list-style: disc;
+  margin: 10px 0 0 20px;
+}
+
+.rights-list ul li {
+  background-color: transparent;
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.rights-conclusion {
+  font-size: 20px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.contributions-title {
+  font-size: 60px;
+  color: #ffffff8b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contributions-text-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contributions-text {
+  font-size: 20px;
+  margin: 15px 0;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.contributions-text strong {
+  color: #1aac68;
+}
+
+.contributions-image {
+  width: 40%;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.medicine-title {
+  font-size: 60px;
+  color: #ffffff8b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.medicine-text-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.medicine-text {
+  font-size: 20px;
+  margin: 15px 0;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.medicine-text strong {
+  color: #1aac68;
+}
+
+.medicine-image {
+  width: 60%;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.game-title {
+  font-size: 60px;
+  color: #ffffff8b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.game-instructions {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.game-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.game-tile {
+  width: 60px;
+  height: 60px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffffff8b;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.game-tile.filled {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.game-tile.correct {
+  background-color: #1aac68;
+  border-color: #1aac68;
+  color: white;
+  transform: scale(1.1);
+}
+
+.game-tile.present {
+  background-color: #d4a017;
+  border-color: #d4a017;
+  color: white;
+  transform: scale(1.1);
+}
+
+.game-tile.absent {
+  background-color: #4a4a4a;
+  border-color: #4a4a4a;
+  color: white;
+}
+
+#keyboard {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.keyboard-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.key {
+  width: 40px;
+  height: 50px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.key:hover {
+  background-color: #0041236d;
+}
+
+.key.enter,
+.key.backspace {
+  width: 60px;
+  font-size: 14px;
+}
+
+.key.correct {
+  background-color: #1aac68;
+}
+
+.key.present {
+  background-color: #d4a017;
+}
+
+.key.absent {
+  background-color: #4a4a4a;
+}
+
+/* Tablet styles (601px - 1024px) */
+@media screen and (max-width: 1023px) {
+  .hamburger {
+    display: block;
+    position: relative;
+    margin-right: 700px;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #16281f;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 48px;
+    margin: 100px 0 0 10%;
+    width: 50%;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    margin: 5px 0 0 10%;
+    width: 50%;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  .history-article,
+  .culture-card,
+  .location-article,
+  .contributions-text-image,
+  .medicine-text-image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .history-content,
+  .culture-text,
+  .location-description,
+  .contributions-text,
+  .medicine-text {
+    width: 100%;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .images,
+  .images-food,
+  .images-location,
+  .contributions-image,
+  .medicine-image {
+    width: 80%;
+    height: auto;
+    margin: 10px 0;
+    order: -1; /* Place images above text */
+  }
+
+  .location-map {
+    width: 100%;
+    order: -1; /* Ensure map div is above text */
+  }
+
+  .culture-title,
+  .problems-title,
+  .rights-title,
+  .contributions-title,
+  .medicine-title,
+  .timeline-title,
+  .game-title {
+    font-size: 48px;
+  }
+
+  .contact-us {
+    width: 80%;
+  }
+
+  .contact-us form input,
+  .contact-us form textarea {
+    font-size: 16px;
+  }
+
+  .contact-us button {
+    width: 50%;
+  }
+
+  .game-tile {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  #keyboard {
+    width: 20%;
+    margin: 0 auto;
+  }
+
+  .key {
+    width: 35px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .key.enter,
+  .key.backspace {
+    width: 50px;
+    font-size: 12px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 20px;
+    text-align: left;
+    left: 0;
+  }
+
+  .timeline-item:nth-child(odd)::before,
+  .timeline-item:nth-child(even)::before {
+    left: 7px;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+}
+
+/* Mobile styles (≤600px) */
+@media screen and (max-width: 600px) {
+  .hamburger {
+    display: block;
+    position: relative;
+    margin-right: 400px;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #16281f;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 36px;
+    margin: 80px auto 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin: 5px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  section {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .history-article,
+  .culture-card,
+  .location-article,
+  .contributions-text-image,
+  .medicine-text-image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .history-content,
+  .culture-text,
+  .location-description,
+  .contributions-text,
+  .medicine-text {
+    width: 100%;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .images,
+  .images-food,
+  .images-location,
+  .contributions-image,
+  .medicine-image {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    order: -1; /* Place images above text */
+  }
+
+  .location-map {
+    width: 100%;
+    order: -1; /* Ensure map div is above text */
+  }
+
+  .culture-title,
+  .problems-title,
+  .rights-title,
+  .contributions-title,
+  .medicine-title,
+  .timeline-title,
+  .game-title {
+    font-size: 36px;
+  }
+
+  .contact-us {
+    width: 90%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .contact-us form input,
+  .contact-us form textarea {
+    font-size: 14px;
+  }
+
+  .contact-us form textarea {
+    height: 80px;
+  }
+
+  .contact-us button {
+    width: 60%;
+  }
+
+  .game-tile {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin: 0 3px;
+  }
+
+  .key {
+    width: 30px;
+    height: 40px;
+    font-size: 12px;
+    margin: 0 3px;
+  }
+
+  .key.enter,
+  .key.backspace {
+    width: 45px;
+    font-size: 10px;
+  }
+
+  .game-instructions {
+    font-size: 16px;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 15px;
+    text-align: left;
+    left: 0;
+  }
+
+  .timeline-item::before {
+    left: 2px;
+  }
+
+  .timeline-date {
+    font-size: 16px;
+  }
+
+  .timeline-description {
+    font-size: 14px;
+  }
+}
